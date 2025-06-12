@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORiem Finance | Smart Online Banking</title>
+  <meta name="description" content="ORiem Finance - Secure online banking, user dashboard, loans, transactions, and more.">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --primary: #0f766e;
+      --accent: #22c55e;
+      --bg: #f9f9f9;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    p.lead {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    nav {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #115e59;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .feature {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .feature h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ORiem Finance</h1>
+    <p class="lead">Modern, Secure & User-Centric Online Banking</p>
+    <nav>
+      <a href="docs/README.md">Docs</a>
+      <a href="docs/roadmap.md">Roadmap</a>
+      <a href="docs/api/overview.md">API</a>
+      <a href="https://github.com/YOUR_USERNAME/oriem">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Built for Digital Banking of Tomorrow</h2>
+    <p>Empower your customers and admins with secure access to banking services, smart dashboards, loans, analytics, and transaction management—all in one modern system.</p>
+    <a class="btn" href="docs/frontend/pages-and-layouts.md">Explore the UI</a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>📱 User Dashboard</h3>
+      <p>Manage accounts, transactions, and loans from a mobile-friendly, intuitive interface.</p>
+    </div>
+    <div class="feature">
+      <h3>🔐 Secure Auth</h3>
+      <p>Role-based access, JWT sessions, and Supabase authentication for full security control.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Admin Control</h3>
+      <p>Admins can manage users, approve loans, and view transaction overviews from a powerful panel.</p>
+    </div>
+    <div class="feature">
+      <h3>🌐 RESTful API</h3>
+      <p>Backend API built with FastAPI and Node.js, with full documentation and error handling.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ORiem Finance. Designed with purpose and precision.
+  </footer>
+</body>
+</html>
