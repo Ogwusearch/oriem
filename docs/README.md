@@ -27,14 +27,14 @@ Welcome to the official documentation for **ORiem Finance** — a secure, modern
 
 ## 🧩 Key Features
 
-- 🔐 JWT Auth with RBAC
-- 💰 Accounts, Transactions, Loans
-- 📊 Admin Dashboard with Analytics
-- 🛡 Security-first Architecture
-- ⚡ FastAPI Backend + React Frontend
-- ☁️ Supabase (PostgreSQL + Auth)
-- 📱 Mobile-Responsive UI
-- 📁 Modular and Scalable Codebase
+- 🔐 JWT Auth with RBAC  
+- 💰 Accounts, Transactions, Loans  
+- 📊 Admin Dashboard with Analytics  
+- 🛡 Security-first Architecture  
+- ⚡ FastAPI Backend + React Frontend  
+- ☁️ Supabase (PostgreSQL + Auth)  
+- 📱 Mobile-Responsive UI  
+- 📁 Modular and Scalable Codebase  
 
 ---
 
@@ -42,19 +42,19 @@ Welcome to the official documentation for **ORiem Finance** — a secure, modern
 
 To set up the project locally, refer to:
 
-- [`/setup/dev-environment.md`](./setup/dev-environment.md)
-- [`/setup/supabase-config.md`](./setup/supabase-config.md)
-- [`/setup/env-example.md`](./setup/env-example.md)
+- [`/setup/dev-environment.md`](./setup/dev-environment.md)  
+- [`/setup/supabase-config.md`](./setup/supabase-config.md)  
+- [`/setup/env-example.md`](./setup/env-example.md)  
 
 ---
 
 ## 📚 Documentation Highlights
 
-- [API Overview](./api/overview.md)
-- [Database Schema](./architecture/database-schema.md)
-- [Component Design](./frontend/components.md)
-- [Security Guidelines](./security/encryption.md)
-- [Loan Approval Flow](./admin-panel/loan-approvals.md)
+- [API Overview](./api/overview.md)  
+- [Database Schema](./architecture/database-schema.md)  
+- [Component Design](./frontend/components.md)  
+- [Security Guidelines](./security/encryption.md)  
+- [Loan Approval Flow](./admin-panel/loan-approvals.md)  
 
 ---
 
@@ -62,10 +62,10 @@ To set up the project locally, refer to:
 
 If you're contributing or reviewing code, please check:
 
-- [`/backend/error-handling.md`](./backend/error-handling.md)
-- [`/auth/jwt-auth.md`](./auth/jwt-auth.md)
-- [`/frontend/routing.md`](./frontend/routing.md)
-- [`/database/security-rules.md`](./database/security-rules.md)
+- [`/backend/error-handling.md`](./backend/error-handling.md)  
+- [`/auth/jwt-auth.md`](./auth/jwt-auth.md)  
+- [`/frontend/routing.md`](./frontend/routing.md)  
+- [`/database/security-rules.md`](./database/security-rules.md)  
 
 ---
 
@@ -79,9 +79,9 @@ For upcoming features and planning, see [roadmap.md](./roadmap.md).
 
 We welcome contributions! Please make sure to:
 
-1. Read the [Code of Conduct](https://github.com/oriem/code-of-conduct)
-2. Follow our [Contribution Guidelines](https://github.com/oriem/contributing)
-3. Write clean, tested, and documented code
+1. Read the [Code of Conduct](https://github.com/oriem/code-of-conduct)  
+2. Follow our [Contribution Guidelines](https://github.com/oriem/contributing)  
+3. Write clean, tested, and documented code  
 
 ---
 
@@ -92,3 +92,4 @@ For questions, reach out via [support@oriem.finance](mailto:support@oriem.financ
 ---
 
 **© 2025 ORiem Finance. All rights reserved.**
+
