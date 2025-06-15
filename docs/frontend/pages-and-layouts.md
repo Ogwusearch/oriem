@@ -1,7 +1,6 @@
-```markdown
 # 🧭 ORiem Finance – Pages & Layouts Guide
 
-This guide documents the major frontend pages and layout structure for the ORiem Finance banking web application. It covers both **User-facing** and **Admin** sections with routing and layout hierarchy.
+This guide documents the major frontend pages and layout structure for the ORiem Finance banking web application. It covers both **Customer-facing** and **Admin** sections with routing and layout hierarchy.
 
 ---
 
@@ -11,14 +10,14 @@ This guide documents the major frontend pages and layout structure for the ORiem
 
 | Page                | Route              | Description                           |
 |---------------------|--------------------|---------------------------------------|
-| Login               | `/login`           | User/Admin login form                 |
+| Login               | `/login`           | Customer/Admin login form             |
 | Signup              | `/signup`          | Customer registration                 |
 | Forgot Password     | `/forgot-password` | Reset password via email              |
 | OTP Verification    | `/verify-otp`      | Verify one-time code after signup     |
 
 ---
 
-### 👤 User Dashboard Pages
+### 👤 Customer Dashboard Pages
 
 | Page                  | Route                    | Description                                 |
 |------------------------|--------------------------|---------------------------------------------|
@@ -40,10 +39,10 @@ This guide documents the major frontend pages and layout structure for the ORiem
 | Page                    | Route                       | Description                                |
 |-------------------------|-----------------------------|--------------------------------------------|
 | Admin Home              | `/admin/dashboard`          | Metrics and system summary                 |
-| User Management         | `/admin/users`              | View, block, or manage customer accounts   |
+| Customer Management     | `/admin/users`              | View, block, or manage customer accounts   |
 | Loan Management         | `/admin/loans`              | Approve or reject loan requests            |
 | Transactions Overview   | `/admin/transactions`       | Full record of all system transactions     |
-| Audit Logs              | `/admin/audit-logs`         | Activity logs of users/admin actions       |
+| Audit Logs              | `/admin/audit-logs`         | Activity logs of customers/admin actions   |
 | Role & Access Control   | `/admin/roles`              | RBAC permissions for different user types  |
 
 ---
@@ -52,13 +51,13 @@ This guide documents the major frontend pages and layout structure for the ORiem
 
 ### 🧭 Main Layouts
 
-```tsx
+```jsx
 src/layouts/
-├── AuthLayout.tsx       // Login/Signup pages layout (no nav)
-├── UserLayout.tsx       // Customer dashboard layout (sidebar, topbar)
-├── AdminLayout.tsx      // Admin panel layout (sidebar + breadcrumbs)
-├── PageWrapper.tsx      // Shared wrapper (auth checks, padding)
-└── ProtectedRoute.tsx   // Guards private routes (auth required)
+├── AuthLayout.jsx       // Login/Signup pages layout (no nav)
+├── CustomerLayout.jsx   // Customer dashboard layout (sidebar, topbar)
+├── AdminLayout.jsx      // Admin panel layout (sidebar + breadcrumbs)
+├── PageWrapper.jsx      // Shared wrapper (auth checks, padding)
+└── ProtectedRoute.jsx   // Guards private routes (auth required)
 ```
 
 ---
@@ -68,42 +67,42 @@ src/layouts/
 ```bash
 src/pages/
 ├── auth/
-│   ├── login.tsx
-│   ├── signup.tsx
-│   └── forgot-password.tsx
+│   ├── login.jsx
+│   ├── signup.jsx
+│   └── forgot-password.jsx
 ├── dashboard/
-│   ├── index.tsx
-│   ├── account/[id].tsx
-│   ├── transfer.tsx
-│   ├── pay-bills.tsx
-│   └── transactions.tsx
+│   ├── index.jsx
+│   ├── account/[id].jsx
+│   ├── transfer.jsx
+│   ├── pay-bills.jsx
+│   └── transactions.jsx
 ├── loans/
-│   ├── apply.tsx
-│   └── details/[loanId].tsx
+│   ├── apply.jsx
+│   └── details/[loanId].jsx
 ├── profile/
-│   └── index.tsx
+│   └── index.jsx
 ├── admin/
-│   ├── dashboard.tsx
-│   ├── users.tsx
-│   ├── loans.tsx
-│   ├── transactions.tsx
-│   ├── audit-logs.tsx
-│   └── roles.tsx
+│   ├── dashboard.jsx
+│   ├── users.jsx
+│   ├── loans.jsx
+│   ├── transactions.jsx
+│   ├── audit-logs.jsx
+│   └── roles.jsx
 └── support/
-    ├── contact.tsx
-    └── faq.tsx
+    ├── contact.jsx
+    └── faq.jsx
 ```
 
 ---
 
 ## 🔒 Route Protection
 
-| Layout         | Access Condition                 |
-|----------------|----------------------------------|
-| AuthLayout     | Public (login/signup)            |
-| UserLayout     | Authenticated customers only     |
-| AdminLayout    | Authenticated admins only        |
-| ProtectedRoute | Wrapped around all private pages |
+| Layout          | Access Condition                   |
+|-----------------|------------------------------------|
+| AuthLayout      | Public (login/signup)              |
+| CustomerLayout  | Authenticated customers only       |
+| AdminLayout     | Authenticated admins only          |
+| ProtectedRoute  | Wrapped around all private pages   |
 
 ---
 
@@ -119,8 +118,8 @@ src/pages/
 ## 🧭 Navigation Flow
 
 - After login:  
-  - If customer → redirect to `/dashboard`  
-  - If admin → redirect to `/admin/dashboard`
+  - If **customer** → redirect to `/dashboard`  
+  - If **admin** → redirect to `/admin/dashboard`
 - Use `useAuth()` context to switch layout and menus dynamically
 
 ---
@@ -131,5 +130,3 @@ src/pages/
 - [`routes.md`](../backend/routes.md)
 - [`role-based-access.md`](../auth/role-based-access.md)
 - [`system-overview.md`](../architecture/system-overview.md)
-
-```
